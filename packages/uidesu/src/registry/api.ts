@@ -77,7 +77,7 @@ export async function getRegistryItems(
   return fetchRegistryItems(items, configWithDefaults(config), { useCache })
 }
 
-export async function getShadcnRegistryIndex() {
+export async function getAodesuRegistryIndex() {
   try {
     const [result] = await fetchRegistry(["index.json"])
 

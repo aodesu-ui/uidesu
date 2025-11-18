@@ -13,7 +13,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/aodesu/ui-cli.git",
-    "directory": "packages/shadcn"
+    "directory": "packages/aodesu"
   },
   "files": [
     "dist"
@@ -30,6 +30,10 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    },
+    "./schema": {
+      "types": "./dist/schema/index.d.ts",
+      "default": "./dist/schema/index.js"
     }
   },
   "bin": "./dist/index.js",

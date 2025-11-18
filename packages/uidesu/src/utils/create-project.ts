@@ -12,7 +12,7 @@ import path from "path";
 import prompts from "prompts";
 import z from "zod";
 
-const MONOREPO_TEMPLATE_URL = "https://codeload.github.com/shadcn-ui/ui/tar.gz/main";
+const MONOREPO_TEMPLATE_URL = "https://codeload.github.com/aodesu-ui/ui/tar.gz/main";
 
 export const TEMPLATES = {
   next: "next",
@@ -197,7 +197,7 @@ async function createViteProject(
     try {
       await execa("git", ["init"], { cwd: projectPath })
       await execa("git", ["add", "-A"], { cwd: projectPath })
-      await execa("git", ["commit", "-m", "Initial commit from shadcn-ui"], {
+      await execa("git", ["commit", "-m", "Initial commit from aodesu-ui"], {
         cwd: projectPath,
       })
     } catch (gitError) {
@@ -287,7 +287,7 @@ async function createMonorepoProject(
 
   try {
     // Get the template.
-    const templatePath = path.join(os.tmpdir(), `shadcn-template-${Date.now()}`)
+    const templatePath = path.join(os.tmpdir(), `aodesu-template-${Date.now()}`)
     await fs.ensureDir(templatePath)
     const response = await fetch(MONOREPO_TEMPLATE_URL)
     if (!response.ok) {

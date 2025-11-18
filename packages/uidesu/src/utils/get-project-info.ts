@@ -48,7 +48,7 @@ export async function getProjectInfo(cwd: string): Promise<ProjectInfo | null> {
     packageJson,
   ] = await Promise.all([
     fg.glob(
-      "**/{vite,app}.config.*|gatsby-config.*|composer.json|react-router.config.*",
+      "**/{vite,app,next}.config.*|gatsby-config.*|composer.json|react-router.config.*",
       {
         cwd,
         deep: 3,
@@ -274,10 +274,10 @@ export async function getProjectConfig(
   }
 
   const config: z.infer<typeof rawConfigSchema> = {
-    $schema: "https://ui.shadcn.com/schema.json",
+    $schema: "https://ui.aodesu.com/schema.json",
     rsc: projectInfo.isRSC,
     tsx: projectInfo.isTsx,
-    style: "new-york",
+    style: "aodesu",
     tailwind: {
       config: projectInfo.tailwindConfigFile ?? "",
       baseColor: "zinc",

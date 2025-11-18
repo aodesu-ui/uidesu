@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { Command } from "commander";
 import packageJson from "../package.json";
+import { build } from "./commands/build";
 import { init } from "./commands/init";
 
 process.on("SIGNINT", () => process.exit(0));
@@ -18,6 +19,7 @@ async function main() {
 
   program
     .addCommand(init)
+    .addCommand(build)
 
   program.parse()
 }

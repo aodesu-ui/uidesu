@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.aodesu.com/schema/registry-item.json",
+  "name": "button",
+  "type": "registry:ui",
+  "dependencies": [
+    "@radix-ui/react-slot"
+  ],
+  "files": [
+    {
+      "path": "registry/aodesu/ui/button.tsx",
+      "content": "",
+      "type": "registry:ui"
+    }
+  ]
+}

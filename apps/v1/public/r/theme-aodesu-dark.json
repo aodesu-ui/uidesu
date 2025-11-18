@@ -1,0 +1,6 @@
+{
+  "$schema": "https://ui.aodesu.com/schema/registry-item.json",
+  "name": "theme-aodesu-dark",
+  "type": "registry:theme",
+  "cssVars": {}
+}

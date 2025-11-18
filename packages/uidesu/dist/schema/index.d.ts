@@ -7,13 +7,13 @@ declare const registryItemFileSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     type: z.ZodEnum<["registry:file", "registry:page"]>;
     target: z.ZodString;
 }, "strip", z.ZodTypeAny, {
-    type: "registry:page" | "registry:file";
     path: string;
+    type: "registry:page" | "registry:file";
     target: string;
     content?: string | undefined;
 }, {
-    type: "registry:page" | "registry:file";
     path: string;
+    type: "registry:page" | "registry:file";
     target: string;
     content?: string | undefined;
 }>, z.ZodObject<{
@@ -22,13 +22,13 @@ declare const registryItemFileSchema: z.ZodDiscriminatedUnion<"type", [z.ZodObje
     type: z.ZodEnum<["registry:lib", "registry:block", "registry:component", "registry:ui", "registry:hook", "registry:theme", "registry:style", "registry:item", "registry:example", "registry:internal"]>;
     target: z.ZodOptional<z.ZodString>;
 }, "strip", z.ZodTypeAny, {
-    type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
     path: string;
+    type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
     content?: string | undefined;
     target?: string | undefined;
 }, {
-    type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
     path: string;
+    type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
     content?: string | undefined;
     target?: string | undefined;
 }>]>;
@@ -91,13 +91,13 @@ declare const registryItemSchema: z.ZodObject<{
         type: z.ZodEnum<["registry:file", "registry:page"]>;
         target: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        type: "registry:page" | "registry:file";
         path: string;
+        type: "registry:page" | "registry:file";
         target: string;
         content?: string | undefined;
     }, {
-        type: "registry:page" | "registry:file";
         path: string;
+        type: "registry:page" | "registry:file";
         target: string;
         content?: string | undefined;
     }>, z.ZodObject<{
@@ -106,13 +106,13 @@ declare const registryItemSchema: z.ZodObject<{
         type: z.ZodEnum<["registry:lib", "registry:block", "registry:component", "registry:ui", "registry:hook", "registry:theme", "registry:style", "registry:item", "registry:example", "registry:internal"]>;
         target: z.ZodOptional<z.ZodString>;
     }, "strip", z.ZodTypeAny, {
-        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         path: string;
+        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         content?: string | undefined;
         target?: string | undefined;
     }, {
-        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         path: string;
+        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         content?: string | undefined;
         target?: string | undefined;
     }>]>, "many">>;
@@ -180,13 +180,13 @@ declare const registryItemSchema: z.ZodObject<{
     devDependencies?: string[] | undefined;
     registryDependencies?: string[] | undefined;
     files?: ({
-        type: "registry:page" | "registry:file";
         path: string;
+        type: "registry:page" | "registry:file";
         target: string;
         content?: string | undefined;
     } | {
-        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         path: string;
+        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         content?: string | undefined;
         target?: string | undefined;
     })[] | undefined;
@@ -219,13 +219,13 @@ declare const registryItemSchema: z.ZodObject<{
     devDependencies?: string[] | undefined;
     registryDependencies?: string[] | undefined;
     files?: ({
-        type: "registry:page" | "registry:file";
         path: string;
+        type: "registry:page" | "registry:file";
         target: string;
         content?: string | undefined;
     } | {
-        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         path: string;
+        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         content?: string | undefined;
         target?: string | undefined;
     })[] | undefined;
@@ -261,13 +261,13 @@ declare const registrySchema: z.ZodObject<{
             type: z.ZodEnum<["registry:file", "registry:page"]>;
             target: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            type: "registry:page" | "registry:file";
             path: string;
+            type: "registry:page" | "registry:file";
             target: string;
             content?: string | undefined;
         }, {
-            type: "registry:page" | "registry:file";
             path: string;
+            type: "registry:page" | "registry:file";
             target: string;
             content?: string | undefined;
         }>, z.ZodObject<{
@@ -276,13 +276,13 @@ declare const registrySchema: z.ZodObject<{
             type: z.ZodEnum<["registry:lib", "registry:block", "registry:component", "registry:ui", "registry:hook", "registry:theme", "registry:style", "registry:item", "registry:example", "registry:internal"]>;
             target: z.ZodOptional<z.ZodString>;
         }, "strip", z.ZodTypeAny, {
-            type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
             path: string;
+            type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
             content?: string | undefined;
             target?: string | undefined;
         }, {
-            type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
             path: string;
+            type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
             content?: string | undefined;
             target?: string | undefined;
         }>]>, "many">>;
@@ -350,13 +350,13 @@ declare const registrySchema: z.ZodObject<{
         devDependencies?: string[] | undefined;
         registryDependencies?: string[] | undefined;
         files?: ({
-            type: "registry:page" | "registry:file";
             path: string;
+            type: "registry:page" | "registry:file";
             target: string;
             content?: string | undefined;
         } | {
-            type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
             path: string;
+            type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
             content?: string | undefined;
             target?: string | undefined;
         })[] | undefined;
@@ -389,13 +389,13 @@ declare const registrySchema: z.ZodObject<{
         devDependencies?: string[] | undefined;
         registryDependencies?: string[] | undefined;
         files?: ({
-            type: "registry:page" | "registry:file";
             path: string;
+            type: "registry:page" | "registry:file";
             target: string;
             content?: string | undefined;
         } | {
-            type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
             path: string;
+            type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
             content?: string | undefined;
             target?: string | undefined;
         })[] | undefined;
@@ -432,13 +432,13 @@ declare const registrySchema: z.ZodObject<{
         devDependencies?: string[] | undefined;
         registryDependencies?: string[] | undefined;
         files?: ({
-            type: "registry:page" | "registry:file";
             path: string;
+            type: "registry:page" | "registry:file";
             target: string;
             content?: string | undefined;
         } | {
-            type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
             path: string;
+            type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
             content?: string | undefined;
             target?: string | undefined;
         })[] | undefined;
@@ -475,13 +475,13 @@ declare const registrySchema: z.ZodObject<{
         devDependencies?: string[] | undefined;
         registryDependencies?: string[] | undefined;
         files?: ({
-            type: "registry:page" | "registry:file";
             path: string;
+            type: "registry:page" | "registry:file";
             target: string;
             content?: string | undefined;
         } | {
-            type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
             path: string;
+            type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
             content?: string | undefined;
             target?: string | undefined;
         })[] | undefined;
@@ -515,13 +515,13 @@ declare const registryIndexSchema: z.ZodArray<z.ZodObject<{
         type: z.ZodEnum<["registry:file", "registry:page"]>;
         target: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        type: "registry:page" | "registry:file";
         path: string;
+        type: "registry:page" | "registry:file";
         target: string;
         content?: string | undefined;
     }, {
-        type: "registry:page" | "registry:file";
         path: string;
+        type: "registry:page" | "registry:file";
         target: string;
         content?: string | undefined;
     }>, z.ZodObject<{
@@ -530,13 +530,13 @@ declare const registryIndexSchema: z.ZodArray<z.ZodObject<{
         type: z.ZodEnum<["registry:lib", "registry:block", "registry:component", "registry:ui", "registry:hook", "registry:theme", "registry:style", "registry:item", "registry:example", "registry:internal"]>;
         target: z.ZodOptional<z.ZodString>;
     }, "strip", z.ZodTypeAny, {
-        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         path: string;
+        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         content?: string | undefined;
         target?: string | undefined;
     }, {
-        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         path: string;
+        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         content?: string | undefined;
         target?: string | undefined;
     }>]>, "many">>;
@@ -604,13 +604,13 @@ declare const registryIndexSchema: z.ZodArray<z.ZodObject<{
     devDependencies?: string[] | undefined;
     registryDependencies?: string[] | undefined;
     files?: ({
-        type: "registry:page" | "registry:file";
         path: string;
+        type: "registry:page" | "registry:file";
         target: string;
         content?: string | undefined;
     } | {
-        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         path: string;
+        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         content?: string | undefined;
         target?: string | undefined;
     })[] | undefined;
@@ -643,13 +643,13 @@ declare const registryIndexSchema: z.ZodArray<z.ZodObject<{
     devDependencies?: string[] | undefined;
     registryDependencies?: string[] | undefined;
     files?: ({
-        type: "registry:page" | "registry:file";
         path: string;
+        type: "registry:page" | "registry:file";
         target: string;
         content?: string | undefined;
     } | {
-        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         path: string;
+        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         content?: string | undefined;
         target?: string | undefined;
     })[] | undefined;
@@ -766,13 +766,13 @@ declare const registryResolvedItemsTreeSchema: z.ZodObject<Pick<{
         type: z.ZodEnum<["registry:file", "registry:page"]>;
         target: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        type: "registry:page" | "registry:file";
         path: string;
+        type: "registry:page" | "registry:file";
         target: string;
         content?: string | undefined;
     }, {
-        type: "registry:page" | "registry:file";
         path: string;
+        type: "registry:page" | "registry:file";
         target: string;
         content?: string | undefined;
     }>, z.ZodObject<{
@@ -781,13 +781,13 @@ declare const registryResolvedItemsTreeSchema: z.ZodObject<Pick<{
         type: z.ZodEnum<["registry:lib", "registry:block", "registry:component", "registry:ui", "registry:hook", "registry:theme", "registry:style", "registry:item", "registry:example", "registry:internal"]>;
         target: z.ZodOptional<z.ZodString>;
     }, "strip", z.ZodTypeAny, {
-        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         path: string;
+        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         content?: string | undefined;
         target?: string | undefined;
     }, {
-        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         path: string;
+        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         content?: string | undefined;
         target?: string | undefined;
     }>]>, "many">>;
@@ -847,13 +847,13 @@ declare const registryResolvedItemsTreeSchema: z.ZodObject<Pick<{
     dependencies?: string[] | undefined;
     devDependencies?: string[] | undefined;
     files?: ({
-        type: "registry:page" | "registry:file";
         path: string;
+        type: "registry:page" | "registry:file";
         target: string;
         content?: string | undefined;
     } | {
-        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         path: string;
+        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         content?: string | undefined;
         target?: string | undefined;
     })[] | undefined;
@@ -876,13 +876,13 @@ declare const registryResolvedItemsTreeSchema: z.ZodObject<Pick<{
     dependencies?: string[] | undefined;
     devDependencies?: string[] | undefined;
     files?: ({
-        type: "registry:page" | "registry:file";
         path: string;
+        type: "registry:page" | "registry:file";
         target: string;
         content?: string | undefined;
     } | {
-        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         path: string;
+        type: "registry:lib" | "registry:block" | "registry:component" | "registry:ui" | "registry:hook" | "registry:theme" | "registry:style" | "registry:item" | "registry:example" | "registry:internal";
         content?: string | undefined;
         target?: string | undefined;
     })[] | undefined;
@@ -1099,19 +1099,19 @@ declare const configSchema: z.ZodObject<{
     }, "strip", z.ZodTypeAny, {
         components: string;
         ui: string;
+        cwd: string;
         utils: string;
         lib: string;
         hooks: string;
-        cwd: string;
         tailwindConfig: string;
         tailwindCss: string;
     }, {
         components: string;
         ui: string;
+        cwd: string;
         utils: string;
         lib: string;
         hooks: string;
-        cwd: string;
         tailwindConfig: string;
         tailwindCss: string;
     }>;
@@ -1136,10 +1136,10 @@ declare const configSchema: z.ZodObject<{
     resolvedPaths: {
         components: string;
         ui: string;
+        cwd: string;
         utils: string;
         lib: string;
         hooks: string;
-        cwd: string;
         tailwindConfig: string;
         tailwindCss: string;
     };
@@ -1169,10 +1169,10 @@ declare const configSchema: z.ZodObject<{
     resolvedPaths: {
         components: string;
         ui: string;
+        cwd: string;
         utils: string;
         lib: string;
         hooks: string;
-        cwd: string;
         tailwindConfig: string;
         tailwindCss: string;
     };
@@ -1256,19 +1256,19 @@ declare const workspaceConfigSchema: z.ZodRecord<z.ZodString, z.ZodObject<{
     }, "strip", z.ZodTypeAny, {
         components: string;
         ui: string;
+        cwd: string;
         utils: string;
         lib: string;
         hooks: string;
-        cwd: string;
         tailwindConfig: string;
         tailwindCss: string;
     }, {
         components: string;
         ui: string;
+        cwd: string;
         utils: string;
         lib: string;
         hooks: string;
-        cwd: string;
         tailwindConfig: string;
         tailwindCss: string;
     }>;
@@ -1293,10 +1293,10 @@ declare const workspaceConfigSchema: z.ZodRecord<z.ZodString, z.ZodObject<{
     resolvedPaths: {
         components: string;
         ui: string;
+        cwd: string;
         utils: string;
         lib: string;
         hooks: string;
-        cwd: string;
         tailwindConfig: string;
         tailwindCss: string;
     };
@@ -1326,10 +1326,10 @@ declare const workspaceConfigSchema: z.ZodRecord<z.ZodString, z.ZodObject<{
     resolvedPaths: {
         components: string;
         ui: string;
+        cwd: string;
         utils: string;
         lib: string;
         hooks: string;
-        cwd: string;
         tailwindConfig: string;
         tailwindCss: string;
     };
