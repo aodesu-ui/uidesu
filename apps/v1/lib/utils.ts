@@ -8,3 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export function absoluteUrl(path: string) {
   return `${process.env.NEXT_PUBLIC_APP_URL}${path}`;
 }
+
+export function getLocalizedUrl(url: string, targetLocale: string) {
+  return url.replace(/^\/(en|es)(\/|$)/, `/${targetLocale}$2`);
+}

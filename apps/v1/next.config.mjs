@@ -28,6 +28,15 @@ const nextConfig = {
   experimental: {
     turbopackFileSystemCacheForDev: true,
   },
+  redirects() {
+    return [
+      {
+        source: "/:locale/components/:path*",
+        destination: "/:locale/docs/components/:path*",
+        permanent: true,
+      },
+    ]
+  },
   /* redirects() {
     return [
       {
@@ -44,14 +53,15 @@ const nextConfig = {
       }
     ]
   },
+  */
   rewrites() {
     return [
       {
         source: "/:lang/docs/:path*.md",
-        destination: "/llm/:path",
+        destination: "/:lang/llm/:path",
       },
     ]
-  }, */
+  },
 };
 
 const withMDX = createMDX({});

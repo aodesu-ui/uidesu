@@ -1,0 +1,41 @@
+---
+title: Avatar
+description: The Avatar component is used to display user profile pictures or icons in a circular frame.
+component: true
+links:
+  doc: https://ui.aodesu.com/components/avatar
+  api: https://ui.aodesu.com/api/avatar
+---
+
+## Installation
+
+Este es un parrafo para teasting el componente Avatar y de los enlaces [Test](https://ui.aodesu.com/components/avatar).
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add avatar
+```
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+```
+
+```tsx showLineNumbers
+<Avatar>
+  <AvatarImage src="https://github.com/shadcn.png" />
+  <AvatarFallback>CN</AvatarFallback>
+</Avatar>
+```

@@ -62,7 +62,7 @@ export default async function RootLayout({
             `,
           }}
         />
-        <meta name="theme-color" content={META_THEME_COLORS.light} />
+        <meta name="theme-color" content={META_THEME_COLORS.dark} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
