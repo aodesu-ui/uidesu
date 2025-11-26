@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { Command } from "commander";
 import packageJson from "../package.json";
+import { add } from "./commands/add";
 import { build } from "./commands/build";
 import { init } from "./commands/init";
 
@@ -19,6 +20,7 @@ async function main() {
 
   program
     .addCommand(init)
+    .addCommand(add)
     .addCommand(build)
 
   program.parse()

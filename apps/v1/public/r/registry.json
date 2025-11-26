@@ -119,12 +119,12 @@
       }
     },
     {
-      "name": "button",
+      "name": "avatar",
       "type": "registry:ui",
       "availableStyles": ["aodesu"],
       "files": [
         {
-          "path": "registry/aodesu/ui/button.tsx",
+          "path": "registry/aodesu/ui/avatar.tsx",
           "type": "registry:ui",
           "style": "aodesu",
           "themes": ["light", "dark"]

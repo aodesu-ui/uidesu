@@ -9,7 +9,7 @@ import { clearRegistryContext, setRegistryHeaders } from "./context";
 import { RegistriesIndexParseError, RegistryInvalidNamespaceError, RegistryNotFoundError, RegistryParseError } from "./errors";
 import { fetchRegistry } from "./fetcher";
 import { fetchRegistryItems } from "./resolver";
-import { registriesIndexSchema, registryIndexSchema, registrySchema, stylesSchema } from "./schema";
+import { iconsSchema, registriesIndexSchema, registryBaseColorSchema, registryIndexSchema, registrySchema, stylesSchema } from "./schema";
 import { isUrl } from "./utils";
 
 export async function getRegistry(
@@ -77,7 +77,7 @@ export async function getRegistryItems(
   return fetchRegistryItems(items, configWithDefaults(config), { useCache })
 }
 
-export async function getAodesuRegistryIndex() {
+export async function getUidesuRegistryIndex() {
   try {
     const [result] = await fetchRegistry(["index.json"])
 
@@ -100,8 +100,28 @@ export async function getRegistryStyles() {
   }
 }
 
+export async function getRegistryIcons() {
+  try {
+    const [result] = await fetchRegistry(["icons/index.json"])
+    return iconsSchema.parse(result)
+  } catch (error) {
+    handleError(error)
+    return {}
+  }
+}
+
 export async function getRegistryBaseColors() {
-  return BASE_COLORS;
+  return BASE_COLORS
+}
+
+export async function getRegistryBaseColor(baseColor: string) {
+  try {
+    const [result] = await fetchRegistry([`colors/${baseColor}.json`])
+
+    return registryBaseColorSchema.parse(result)
+  } catch (error) {
+    handleError(error)
+  }
 }
 
 export async function getRegistriesIndex(options?: { useCache?: boolean }) {
